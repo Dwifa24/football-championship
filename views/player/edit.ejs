@@ -1,0 +1,49 @@
+<%- include('../header') %>
+<div class="container my-2">  
+<h3>Edit League </h3>
+    <form method="post" action="/players/update/<%= result.id %>">
+    <div class="row mb-3">
+      <label for="" class="col-sm-2 col-form-label">Back Number</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="back_number"  name="back_number" value="<%= result.back_number %>">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" name="name" value="<%= result.name %>">
+      </div>
+    </div>
+    <div class="row mb-3">
+        <label for="" class="col-sm-2 col-form-label">Nationality</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="nationality" name="nationality" value="<%= result.nationality %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="" class="col-sm-2 col-form-label">Born</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="bprn" name="bprn" value="<%= result.bprn %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="" class="col-sm-2 col-form-label">Height</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="height" name="height" value="<%= result.height %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="" class="col-sm-2 col-form-label">Image</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="image" name="image" value="<%= result.image %>">
+        </div>
+      </div><div class="row mb-3">
+        <label for="" class="col-sm-2 col-form-label">Club Id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="clubId" name="clubId" value="<%= result.clubId %>">
+        </div>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+<%- include('../footer') %>

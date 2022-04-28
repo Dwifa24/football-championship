@@ -1,0 +1,20 @@
+<%- include('../header') %>
+<div class="container my-2">  
+    <h3>Add Club</h3>
+        <form method="post" action="/leagues/club/create>">
+        <div class="row mb-3">
+          <label for="" class="col-sm-2 col-form-label">League Id</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"  name="leagueId">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="" class="col-sm-2 col-form-label">Club Id</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="founded" name="clubId">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+<%- include('../footer') %>

@@ -1,0 +1,31 @@
+<%- include('../header') %>
+<div class="container my-2">
+  <h3>Detail Club</h3>
+    <div class="row row-cols-md-3">
+        <div class="col">
+            <div class="card">
+                <img src="<%= leagueClub.image %>" class="card-img-top" alt=" ">
+                <div class="card-body">
+                  <h5 class="card-title">Name    : <%= leagueClub.name %></h5>
+                  <h5 class="card-title">Founded : <%= leagueClub.founded %></h5>
+                  <h5 class="card-title">Manager : <%= leagueClub.manager %></h5>
+                  <h5 class="card-title">Stadium : <%= leagueClub.stadium %></h5>
+                  <h5 class="card-title">Country : <%= leagueClub.country %></h5><br>
+                  <div class="row">
+                    <a href="/clubs/league/create" class="btn btn-primary">Add League</a>
+                    <a href="/clubs/league/delete/<%= leagueClub.id %>" class="btn btn-primary">Delete League</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <ul>
+                <% leagueClub.leagues.forEach(league => { %>
+                <li><a href="/leagues/club/<%= league.id %>"><%= league.name %></a></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<%- include('../footer') %>

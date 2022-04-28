@@ -1,0 +1,28 @@
+<%- include('../header') %>
+<div class="container my-2">  
+<div><a href="/players/create" class="btn btn-lg btn-primary">+ Add player</a></div><br>
+<div class="container my-2"> 
+  <div class="row row-cols-md-4">
+        <% players.forEach(player => { %>
+  
+            <div class="col">
+              <div class="card ">
+                <img src="<%= player.image %>" class="card-img-top" alt=" ">
+                <div class="card-body text-success">
+                  <h5 class="card-title"><%= player.back_number %></h5>
+                  <h5 class="card-title"><%= player.name %></h5>
+                  <h5 class="card-title"><%= player.nationality %></h5>
+                  <h5 class="card-title"><%= player.born %></h5>
+                  <h5 class="card-title"><%= player.height %></h5>
+                  <h5 class="card-title"><%= player.image %></h5>
+                  <h5 class="card-title"><%= club.name %></h5>
+                  <a href="/players/update/<%= player.id %>" class="btn btn-primary">Edit player</a>
+                  <a href="/players/delete/<%= player.id %>" class="btn btn-primary">Delete player</a>
+                </div>
+              </div>
+          </div>
+      <% }) %>
+  </div>
+  </div>
+  </div>
+<%- include('../footer') %>
